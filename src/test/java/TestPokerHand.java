@@ -32,11 +32,11 @@ public class TestPokerHand {
     @Test
     public void threeOfAKindTest(){
         var hand = new PokerHand(new Card[]{
-                new Card(Suit.SPADE, Rank.NUMBER_2),
+                new Card(Suit.SPADE, Rank.NUMBER_8),
                 new Card(Suit.HEART, Rank.NUMBER_6),
                 new Card(Suit.HEART, Rank.NUMBER_6),
-                new Card(Suit.HEART, Rank.NUMBER_8),
-                new Card(Suit.HEART, Rank.NUMBER_8)
+                new Card(Suit.HEART, Rank.NUMBER_3),
+                new Card(Suit.HEART, Rank.NUMBER_6)
     });
         assertEquals("Three of a kind NUMBER_6", hand.getThreeOfAKind());
 

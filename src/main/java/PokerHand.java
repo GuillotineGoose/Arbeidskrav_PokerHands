@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public class PokerHand {
     private Card[] cards;
     public PokerHand(Card[] cards) {
@@ -35,6 +39,23 @@ public class PokerHand {
     }
 
     public Object getThreeOfAKind() {
-        return "Three of a kind";
+        Map<Rank, ArrayList<Card>> threeOfAKind = new HashMap<>();
+        var kind = Rank.NO_RANK;
+
+        for (var card : cards){
+            if (threeOfAKind.get(card.getRank()) == null){
+
+                threeOfAKind.put(card.getRank(), new ArrayList<Card>());
+            }
+
+            threeOfAKind.get(card.getRank()).add(card);
+        }
+
+        for (var i : threeOfAKind.keySet()){
+            if (threeOfAKind.get(i).size() == 3)
+                kind = i;
+        }
+
+        return "Three of a kind " + kind;
     }
 }
