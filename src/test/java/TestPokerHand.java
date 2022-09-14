@@ -14,7 +14,7 @@ public class TestPokerHand {
                 new Card(Suit.HEART, Rank.NUMBER_8),
                 new Card(Suit.HEART, Rank.ACE)
         });
-        assertEquals("high card ACE", hand.getScore());
+        assertEquals("high card ACE", hand.getHighCard());
     }
 
     @Test
@@ -26,7 +26,7 @@ public class TestPokerHand {
                 new Card(Suit.HEART, Rank.NUMBER_8),
                 new Card(Suit.HEART, Rank.ACE)
         });
-        assertEquals("Pair NUMBER_8", hand.getScore());
+        assertEquals("Pair NUMBER_8", hand.getPair());
     }
 
 }

@@ -1,4 +1,5 @@
 public enum Rank {
+    NO_RANK,
     NUMBER_1,
     NUMBER_2,
     NUMBER_3,
