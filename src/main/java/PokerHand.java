@@ -8,7 +8,7 @@ public class PokerHand {
         this.cards = cards;
     }
 
-    public Object getHighCard() {
+    public String getHighCard() {
 
         var card = cards[0];
         for (var cardInHand : cards){
@@ -21,7 +21,7 @@ public class PokerHand {
         return "high card " + card.getRank();
     }
 
-    public Object getPair() {
+    public String getPair() {
         var card = cards[0];
         Rank pair = Rank.NO_RANK;
         Rank tempPair = Rank.NO_RANK;
@@ -38,7 +38,7 @@ public class PokerHand {
         return "Pair " + pair;
     }
 
-    public Object getThreeOfAKind() {
+    public String getThreeOfAKind() {
         Map<Rank, ArrayList<Card>> threeOfAKind = new HashMap<>();
         var kind = Rank.NO_RANK;
 
@@ -57,5 +57,9 @@ public class PokerHand {
         }
 
         return "Three of a kind " + kind;
+    }
+
+    public String getStraight(){
+        return  null;
     }
 }
