@@ -4,7 +4,7 @@ public class TestPokerHand {
 
     @Test
     public void highCardTet(){
-
+        new pokerHand = pokerHand[];
     }
 
 }
