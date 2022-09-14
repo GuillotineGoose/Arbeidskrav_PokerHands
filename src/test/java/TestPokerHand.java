@@ -17,4 +17,16 @@ public class TestPokerHand {
         assertEquals("high card ACE", hand.getScore());
     }
 
+    @Test
+    public void pairTest(){
+        var hand = new PokerHand(new Card[]{
+                new Card(Suit.SPADE, Rank.NUMBER_2),
+                new Card(Suit.HEART, Rank.NUMBER_8),
+                new Card(Suit.HEART, Rank.NUMBER_6),
+                new Card(Suit.HEART, Rank.NUMBER_8),
+                new Card(Suit.HEART, Rank.ACE)
+        });
+        assertEquals("Pair NUMBER_8", hand.getScore());
+    }
+
 }
