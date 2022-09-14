@@ -34,4 +34,7 @@ public class PokerHand {
         return "Pair " + pair;
     }
 
+    public Object getThreeOfAKind() {
+        return "Three of a kind";
     }
+}

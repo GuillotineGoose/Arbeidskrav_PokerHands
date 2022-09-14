@@ -29,4 +29,15 @@ public class TestPokerHand {
         assertEquals("Pair NUMBER_8", hand.getPair());
     }
 
-}
+    @Test
+    public void threeOfAKindTest(){
+        var hand = new PokerHand(new Card[]{
+                new Card(Suit.SPADE, Rank.NUMBER_2),
+                new Card(Suit.HEART, Rank.NUMBER_6),
+                new Card(Suit.HEART, Rank.NUMBER_6),
+                new Card(Suit.HEART, Rank.NUMBER_8),
+                new Card(Suit.HEART, Rank.NUMBER_8)
+    });
+        assertEquals("Three of a kind NUMBER_6", hand.getThreeOfAKind());
+
+}}
