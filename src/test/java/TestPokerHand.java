@@ -44,14 +44,14 @@ public class TestPokerHand {
     @Test
     public void straightTest(){
         var hand = new PokerHand(new Card[]{
-                new Card(Suit.SPADE, Rank.NUMBER_8),
-                new Card(Suit.HEART, Rank.NUMBER_6),
-                new Card(Suit.HEART, Rank.NUMBER_6),
+                new Card(Suit.SPADE, Rank.NUMBER_6),
                 new Card(Suit.HEART, Rank.NUMBER_3),
-                new Card(Suit.HEART, Rank.NUMBER_6)
+                new Card(Suit.HEART, Rank.NUMBER_5),
+                new Card(Suit.HEART, Rank.NUMBER_4),
+                new Card(Suit.HEART, Rank.NUMBER_2)
         });
 
-        assertEquals("Straight ", hand.getStraight());
+        assertEquals("Straight! with 23456", hand.getStraight());
     }
 
 }

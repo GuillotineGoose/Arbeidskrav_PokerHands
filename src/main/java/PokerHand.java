@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PokerHand {
     private Card[] cards;
@@ -60,6 +58,26 @@ public class PokerHand {
     }
 
     public String getStraight(){
-        return  null;
+        ArrayList<Card> cardList = new ArrayList<>();
+        for(var cardInHand : cards) {
+            cardList.add(cardInHand);
+            }
+        Collections.sort(cardList);
+        if (cardList.get(0).getRank().ordinal() == cardList.get(1).getRank().ordinal() - 1){
+            if (cardList.get(0).getRank().ordinal() == cardList.get(2).getRank().ordinal() - 2){
+                if (cardList.get(0).getRank().ordinal() == cardList.get(3).getRank().ordinal() - 3){
+                    if (cardList.get(0).getRank().ordinal() == cardList.get(4).getRank().ordinal() - 4){
+                        String cardsInHand = "";
+                        for (int x=0; x<5; x++){
+                            cardsInHand = cardsInHand + cardList.get(x).getRank().ordinal();
+                        }
+                        return "Straight! with " + cardsInHand;
+                    }
+                }
+            }
+        }
+
+
+        return  "no straight";
     }
 }
