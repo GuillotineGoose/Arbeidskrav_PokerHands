@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/GuillotineGoose/Arbeidskrav_PokerHands/actions/workflows/maven.yml/badge.svg)](https://github.com/GuillotineGoose/Arbeidskrav_PokerHands/actions/workflows/maven.yml)
+
 # Innlevering 1: Programmeringsferdigheter
 
 ## Oppgave
